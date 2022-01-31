@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('Docker') {
-                	sh 'docker build . '
+                	sh 'docker build -t oyamkovyi/httpd:latest . '
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push oyamkovyi/toolbox:latest
+                docker push oyamkovyi/httpd:latest
                 '''
             }
         }
