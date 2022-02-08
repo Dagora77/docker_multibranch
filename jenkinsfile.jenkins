@@ -23,16 +23,16 @@ pipeline {
             }
         }
         
-//       stage("check docker file by linting") {
-//            steps {
-//               echo " ============== lint dockerfile ================== "
-//                dir ('Docker'){
-//                     sh 'docker run --rm -i hadolint/hadolint < . '
-//                    sh 'sleep 5'
-//               }
+       stage("check docker file by linting") {
+            steps {
+               echo " ============== lint dockerfile ================== "
+                dir ('Docker'){
+                    sh 'docker run --rm -i hadolint/hadolint < . '
+                    sh 'sleep 5'
+               }
                         
-//           }
-//       }
+           }
+       }
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
