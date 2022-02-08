@@ -38,6 +38,7 @@ pipeline {
                 echo " ============== start building image =================="
                 dir ('Docker') {
                 	sh 'docker build -t dagora77/httpd:latest . '
+                    sh 'echo "Docker build created"'
                 }
             }
         }
