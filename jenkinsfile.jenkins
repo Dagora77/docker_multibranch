@@ -28,7 +28,7 @@ pipeline {
                echo " ============== lint dockerfile ================== "
                 dir ('Docker'){
                     sh 'docker run --rm -i hadolint/hadolint < Dockerfile '
-                    sh 'sleep 5'
+                    
                }
                         
            }
