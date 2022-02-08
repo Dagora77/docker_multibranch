@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo " ============== lint dockerfile ================== "
                 dir ('Docker'){
-                     sh 'docker run --rm -i hadolint/hadolint < Dockerfile'
+                     sh 'docker run --rm -i hadolint/hadolint < . '
                 }
                         
             }
