@@ -1,2 +1,2 @@
 FROM httpd:2.4
-RUN apt update -y && apt upgrade -y && apt autoremove -y && apt clean 
+RUN apt-get update -y && apt-get upgrade -y && apt-get autoremove -y && apt-get clean 
