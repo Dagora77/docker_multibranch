@@ -27,12 +27,8 @@ pipeline {
             steps {
                echo " ============== lint dockerfile ================== "
                 dir ('Docker'){
-                    try {
-                    sh 'docker run --rm -i hadolint/hadolint < Dockerfile '
-                    } catch (err) {
-                    echo "Check your Dockerfile"
-                    }
-               }
+                   sh 'docker run --rm -i hadolint/hadolint < Dockerfile '
+                  }
                         
            }
        }
